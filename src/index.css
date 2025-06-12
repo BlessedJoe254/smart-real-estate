@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    @apply bg-gray-900 text-white m-0 min-h-screen;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply text-orange-500 mb-4;
+}
+
+a {
+    @apply font-medium text-blue-400 no-underline;
+}
+
+a:hover {
+    @apply text-blue-500;
+}
+
+
+/* Cards */
+
+.card {
+    @apply bg-gray-800 rounded-lg shadow-lg p-6 transition-transform;
+}
+
+.card:hover {
+    @apply scale-105;
+}
+
+
+/* Subsystem Button */
+
+.btn-subsystem {
+    @apply rounded-md border border-transparent px-4 py-2 text-base font-medium bg-gray-800 text-white transition duration-300 cursor-pointer;
+}
+
+.btn-subsystem:hover {
+    @apply bg-orange-600 text-gray-900;
+}
+
+.btn-active {
+    @apply bg-red-900 text-white;
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4b5563;
+    border-radius: 4px;
+}
+
+
+/* Animations */
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 4s linear infinite;
+}
