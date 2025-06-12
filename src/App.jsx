@@ -137,6 +137,8 @@ function App() {
             <Route path="/view-camera-feeds" element={<CameraFeeds />} />
             <Route path="/toggle-alarm" element={<ToggleAlarm />} />
             <Route path="/view-sensors" element={<SensorsView />} />
+            
+
 
             {/* Door Lock Subpages */}
             <Route path="/lock-status" element={<LockStatus />} />
